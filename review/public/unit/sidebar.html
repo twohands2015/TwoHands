@@ -1,0 +1,11 @@
+<div class="list-group" ng-controller="sidebarCtrl">
+	<a 
+		ng-href="#/market/{{typeItem.text}}" id="{{typeItem.text}}"
+		ng-class="{ active: isActive('/market/{{typeItem.text}}')}"
+		class="list-group-item"
+		ng-repeat="typeItem in typeItems"
+	>
+		<span class="badge">{{typeItem.num}}</span>
+		{{typeItem.text}}
+	</a>
+</div>

@@ -1,0 +1,138 @@
+<div ng-include="'unit/header.html'"></div>
+<div class="container">
+    <div id="product-photoslider">
+        <!-- slider -->
+        <div class="panel panel-default">
+	            <div class="panel-body">
+	                <div class="swiper-container">
+			            <!-- Additional required wrapper -->
+			            <div class="swiper-wrapper">
+			                <!-- Slides -->
+			                <div class="swiper-slide" style="background-image:url(img/test_01.jpg)"></div>
+			                <div class="swiper-slide" style="background-image:url(img/test_02.jpg)"></div>
+			                <div class="swiper-slide" style="background-image:url(img/test_03.jpg)"></div>
+			            </div>
+			            <!-- If we need pagination -->
+			            <div class="swiper-pagination"></div>
+			        </div>
+	            </div>
+	        </div>
+		<!-- Product Bi -->
+		<div id="product-bi">
+	        <div class="panel panel-default">
+	            <div class="panel-body">
+	                <legend>{{productData.title}}</legend>
+					<table class="table table-hover">
+	                    <tr><td>{{productData.bi}}</td></tr>
+                	</table>
+	            </div>
+	        </div>
+        </div>
+    </div>
+    <div id="product-info">
+    	<div class="panel panel-default">
+            <div class="panel-body">
+                <button type="button" class="btn btn-default pull-right">Visit</button>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <table class="table table-hover">
+                    <tr>
+                    	<td class="col-xs-2 text-right">HopePlace:</td>
+                    	<td>Test_Plaec</td>
+                    </tr>
+                    <tr>
+                    	<td class="col-xs-2 text-right">Type:</td>
+                    	<td>Test_Type</td>
+                    </tr>
+                    <tr>
+                    	<td class="col-xs-2 text-right">Number:</td>
+                    	<td>1</td>
+                    </tr>
+                    <tr>
+                    	<td class="col-xs-2 text-right">Price:</td>
+                    	<td>199</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include="'unit/footer.html'"></div>
+<style type="text/css">
+#product-photoslider {
+    position: relative;
+    float: left;
+}
+
+.swiper-container {
+    width: 100%;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+#product-info {
+    position: relative;
+    float: left;
+}
+
+#product-bi {
+	width: 100%;
+    position: relative;
+    float: left;
+}
+
+.table>tbody>tr>td {
+    border: none;
+    border-width: 0px;
+}
+
+.table {
+	margin-bottom: 0;
+}
+
+.panel {
+	margin-bottom: 5px;
+}
+
+@media {
+    @media screen and (min-width: 1200px) {
+        #product-photoslider {
+            width: 50%;
+        }
+        #product-info {
+            width: 50%;
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+        #product-photoslider {
+            width: 50%;
+        }
+        #product-info {
+            width: 50%;
+        }
+    }
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+        #product-photoslider {
+            width: 100%;
+        }
+        #product-info {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        #product-photoslider {
+            width: 100%;
+        }
+        #product-info {
+            width: 100%;
+        }
+    }
+}
+</style>

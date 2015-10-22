@@ -1,0 +1,31 @@
+<div ng-controller="headerCtrl">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#home">TwoHands</a>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="glyphicon glyphicon-menu-down"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#home">首頁</a></li>
+                    <li><a href="#/market/All">市集</a></li>
+                    <li><a href="#/product/1">Product</a></li>
+                </ul>
+                <ul class='nav navbar-nav navbar-right'>
+                    <li ng-repeat="item in header_items">
+                        <a href="{{item.url}}">
+                            <span ng-bind="item.text"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<style type="text/css">
+    .navbar-fixed-top{
+        position: relative;
+    }
+</style>

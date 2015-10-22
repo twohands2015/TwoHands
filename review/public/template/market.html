@@ -1,0 +1,76 @@
+<div ng-include="'unit/header.html'"></div>
+<div class="container">
+    <div id="market-sidebar">
+        <div ng-include="'unit/sidebar.html'"></div>
+    </div>
+    <div id="market-productlist">
+        <div ng-include="'unit/productlist.html'"></div>
+    </div>
+</div>
+<div ng-include="'unit/footer.html'"></div>
+<style type="text/css">
+#market-sidebar {
+    position: relative;
+    float: left;
+}
+
+#market-productlist {
+    position: relative;
+    float: left;
+    padding: 0px 15px 15px;
+}
+
+.col-sm-6 {
+	padding-right: 3px;
+	padding-left:  3px;
+}
+
+.col-md-3 {
+	padding-right: 3px;
+	padding-left:  3px
+}
+
+@media {
+    @media screen and (min-width: 1200px) {
+        h3 {
+            font-size: 16px;
+        }
+        #market-sidebar {
+            width: 20%;
+        }
+        #market-productlist {
+            width: 80%;
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+        h3 {
+            font-size: 20px;
+        }
+        #market-sidebar {
+            width: 20%;
+        }
+        #market-productlist {
+            width: 80%;
+        }
+    }
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+        h3 {
+            font-size: 28px;
+        }
+        #market-sidebar {
+            width: 100%;
+        }
+        #market-productlist {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        #market-sidebar {
+            width: 100%;
+        }
+        #market-productlist {
+            width: 100%;
+        }
+    }
+}
+</style>
