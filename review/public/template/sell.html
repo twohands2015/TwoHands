@@ -1,38 +1,42 @@
 <div ng-include="'unit/header.html'"></div>
 <div class="container">
-    <form action="" method="POST" role="form">
-        <legend>I WANT SELL</legend>
-        <div class="form-group">
-            <label>標題</label>
-            <input type="text" class="form-control" placeholder="Title">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form action="" method="POST" role="form">
+                <legend>I WANT SELL</legend>
+                <div class="form-group">
+                    <label>標題</label>
+                    <input type="text" class="form-control" placeholder="Title">
+                </div>
+                <div class="form-group">
+                    <label>希望交易地點</label>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label>商品類別</label>
+                    <select class="form-control" required="required">
+                        <option value="">-- 選擇商品類別 --</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>圖片</label>
+                    <input id="input-pic-updoader" type="file" multiple=true class="file-loading">
+                </div>
+                <div class="form-group">
+                    <label>數量</label>
+                    <input type="number" class="form-control" min="0" required="required">
+                </div>
+                <div class="form-group">
+                    <label>價格</label>
+                    <input type="number" class="form-control" min="0" required="required">
+                </div>
+                <div class="form-group">
+                    <label>物品簡介</label>
+                    <textarea class="form-control" rows="3" required="required"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
-        <div class="form-group">
-            <label>希望交易地點</label>
-            <input type="text" class="form-control" placeholder="">
-        </div>
-        <div class="form-group">
-            <label>商品類別</label>
-            <select class="form-control" required="required">
-                <option value="">-- 選擇商品類別 --</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>圖片</label>
-            <input id="input-pic-updoader" type="file" multiple=true class="file-loading">
-        </div>
-        <div class="form-group">
-            <label>數量</label>
-            <input type="number" class="form-control" min="0" required="required">
-        </div>
-        <div class="form-group">
-            <label>價格</label>
-            <input type="number" class="form-control" min="0" required="required">
-        </div>
-        <div class="form-group">
-            <label>物品簡介</label>
-            <textarea class="form-control" rows="3" required="required"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    </div>
 </div>
 <div ng-include="'unit/footer.html'"></div>
