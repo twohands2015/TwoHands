@@ -4,32 +4,29 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\User;
-use Validator;
+// use Validator;
 use Illuminate\Http\Request;
-use App\Http\Requests;
+// use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class AuthenticateController extends Controller
+class AuthController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function Login(){
-        // $users = User::all();
-        if (0) {
-            return Auth::user();
-        } else {
-            return 'invalid email/password';
-        }        
+    public function Login(Request $request){
     }
 
     public function Logout(){
-        Auth::logout();
         return 'logged out';
     }
 
+    public function getUser(){
+        $user = User::all();
+        return $user;
+    }
     public function index()
     {
         //

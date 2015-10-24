@@ -17,9 +17,10 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'api'], function(){
-	Route::match(['get', 'post'], 'test', function () {
+	Route::match(['get', 'post'], 'apitest', function () {
    		return Response::json(['status' => 200, 'msg' => 'api connected success.']);
 	});
-	Route::post('login/auth','AuthenticateController@Login');
-	Route::get('login/destroy','AuthenticateController@Logout');
+	Route::post('login/auth','AuthController@Login');
+	Route::get('login/destroy','AuthController@Logout');
+	Route::get('user/list', 'AuthController@getUser');
 });
