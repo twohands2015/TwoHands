@@ -27,6 +27,7 @@
 	<script type="text/javascript" src="js/twohandsApp.js"></script>
 
 	<script type="text/javascript" src="js/services/authSrvc.js"></script>
+	<script type="text/javascript" src="js/services/sessionSrvc.js"></script>
 
 	<script type="text/javascript" src="js/controllers/headerCtrl.js" ></script>
 	<script type="text/javascript" src="js/controllers/sidebarCtrl.js" ></script>
